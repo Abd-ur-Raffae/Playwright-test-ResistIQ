@@ -20,7 +20,7 @@ test.describe('Login Page', () => {
 
     await expect(page.locator('.text-sm.opacity-90')).toHaveText('Invalid email or password');
   });
-  test.only('Login with empty email field', async ({ page }) => {
+  test('Login with empty email field', async ({ page }) => {
     await page.locator('[data-testid="input-email"]').fill('');
     await page.locator('[data-testid="input-password"]').fill('11111111');
     await page.locator('[data-testid="button-login"]').click();
